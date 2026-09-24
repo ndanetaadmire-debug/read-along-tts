@@ -1,0 +1,21 @@
+:root { --ink: #1d1d1f; --muted: #5f6368; --line: #e3e3e3; --accent: #3b5bdb; --hl: #ffe066; --sent: #eef2ff; font-family: system-ui, sans-serif; color: var(--ink); }
+body { margin: 0; background: #fbfbfd; }
+.app { max-width: 46rem; margin: 0 auto; padding: 1.5rem; }
+header { display: flex; justify-content: space-between; align-items: center; }
+h1 { margin: 0; }
+button, select { font: inherit; }
+button { border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: .4rem .7rem; cursor: pointer; }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); min-width: 3rem; }
+.controls { position: sticky; top: 0; z-index: 1; display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; padding: .75rem 0; background: #fbfbfd; border-bottom: 1px solid var(--line); margin: 1rem 0; }
+.rate { display: flex; gap: .4rem; align-items: center; }
+.time { color: var(--muted); font-variant-numeric: tabular-nums; }
+progress { flex: 1; min-width: 6rem; }
+.badge { font-size: .75rem; border: 1px solid var(--muted); color: var(--muted); border-radius: 4px; padding: .1rem .4rem; }
+.reader { font-size: 1.25rem; line-height: 1.9; white-space: pre-wrap; }
+.sentence.active { background: var(--sent); border-radius: 4px; }
+.word { cursor: pointer; border-radius: 3px; }
+.word:hover { text-decoration: underline; }
+.word[aria-current="true"] { background: var(--hl); }
+textarea { width: 100%; font: inherit; font-size: 1rem; margin-top: 1rem; padding: .75rem; border-radius: 8px; border: 1px solid var(--line); }
+.error { color: #b3261e; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
